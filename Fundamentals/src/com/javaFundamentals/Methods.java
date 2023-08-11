@@ -3,6 +3,7 @@
 package com.javaFundamentals;
 
 public class Methods {
+	String name ="Aryan";
 	//general syntax:
 	public void addNumber(int num,int num2){
 		System.out.println(num+num2);
