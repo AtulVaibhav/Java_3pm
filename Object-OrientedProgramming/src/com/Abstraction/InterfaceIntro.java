@@ -35,3 +35,13 @@ public class InterfaceIntro {
 	}
 
 }
+
+/*
+ * className refr = new className();
+ * Hello h = new Hello()
+ * Parent ref = new Child() dynamic dispatch
+ */
+
+
+
+
