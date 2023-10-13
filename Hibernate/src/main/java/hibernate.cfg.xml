@@ -13,8 +13,11 @@
 	  <property name="hbm2ddl.auto">update</property>
 	  <property name="show_sql">true</property>
 	  <property name="format_sql">true</property>
-	  <mapping class="com.javaLearning.Hibernate.entity.Student"/>
+	  
+	 <!--   <mapping class="com.javaLearning.Hibernate.entity.Student"/>
 	  <mapping class="com.javaLearning.Hibernate.entity.Employee"/>
 	  <mapping class="com.javaLearning.Hibernate.entity.Address"/>
+	  -->
+	  <mapping class="com.javlearning.hibernate.collection.User"/>
 	</session-factory>
 </hibernate-configuration>	
