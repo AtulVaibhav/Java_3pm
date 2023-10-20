@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="question" class="com.javaLearning.constructor.DI_3.Question">
+    <constructor-arg value="101" type="int"/>
+    <constructor-arg value="What is Java?"/>
+    <constructor-arg>
+      <list>
+        <!--  <value>Java is a programming language</value>
+        <value>Java is an object-oriented</value>
+        <value>Java is a high-level language</value>-->
+        <bean id="ans" class="com.javaLearning.constructor.DI_3.Answer">
+          <constructor-arg value="1" type="int"/>
+          <constructor-arg value="Java is a programming language"/>
+        </bean>
+        
+        <bean id="ans2" class="com.javaLearning.constructor.DI_3.Answer">
+          <constructor-arg value="2" type="int"/>
+          <constructor-arg value="Java is an object-oriented"/>
+        </bean>
+        
+        <bean id="ans3" class="com.javaLearning.constructor.DI_3.Answer">
+          <constructor-arg value="3" type="int"/>
+          <constructor-arg value="Java is a high-level language"/>
+        </bean>
+      </list>
+    </constructor-arg>  
+    
+   </bean>
+  
+</beans>

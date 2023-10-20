@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <!-- Constructor Injection -->
+   <bean id="emp" class="com.javaLearning.constructor.DI.Employee">
+   <constructor-arg type="int" value="101"/>
+   <constructor-arg type="String" value="Rahul"/>
+   <constructor-arg type="String" value="Development"/>
+   </bean>
+</beans>

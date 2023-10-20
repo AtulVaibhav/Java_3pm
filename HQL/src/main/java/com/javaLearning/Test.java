@@ -61,6 +61,9 @@ public class Test {
 		session.getTransaction().commit();
 		System.out.println(i+" row affected");
 	}
+	
+	
+	
 	public static void main(String[] args) {
 		Configuration cfg = new Configuration();
 		SessionFactory factory = cfg.configure().buildSessionFactory();
@@ -68,7 +71,8 @@ public class Test {
 	   // fromClause(session);
 	   // selectClause(session);
 	   // updateClause(session);
-	    deleteClause(session);
+	   // deleteClause(session);
+	   
 	}
 
 }
