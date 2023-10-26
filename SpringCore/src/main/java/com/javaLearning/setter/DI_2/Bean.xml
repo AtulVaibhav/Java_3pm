@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="user" class="com.javaLearning.setter.DI_2.User">
+   <property name="userId" value="201"/>
+   <property name="userName" value="Vaibhav"/>
+   </bean>
+   
+   <bean id="product" class="com.javaLearning.setter.DI_2.Product">
+   <property name="productId" value="101"/>
+   <property name="productName" value="Laptops"/>
+   <property name="productDesc" value="Designing the world"/>
+   <property name="user" ref="user"/>
+   </bean>
+</beans>

@@ -1,0 +1,3 @@
+byName :setter injection, bean name matches with property name 
+byType :setter injection, bean type matches with property type
+constructor : construction injection
