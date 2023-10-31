@@ -8,11 +8,7 @@
         
     <tx:annotation-driven/>    
 
-    
-    
-    
-    
-    
+   
     <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
      <property name="url" value="jdbc:mysql://localhost:3306/springorm"/>
