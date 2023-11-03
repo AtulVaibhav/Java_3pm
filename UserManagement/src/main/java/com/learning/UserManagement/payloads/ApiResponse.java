@@ -1,13 +1,18 @@
 package com.learning.UserManagement.payloads;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class ApiResponse {
-   String msg;
-   Boolean status;
-public ApiResponse(String msg, Boolean status) {
-	super();
-	this.msg = msg;
-	this.status = status;
-}
+   private String msg;
+   private boolean status;
+
    
    
 }

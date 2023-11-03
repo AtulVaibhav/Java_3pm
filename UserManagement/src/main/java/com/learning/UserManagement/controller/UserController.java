@@ -2,6 +2,8 @@ package com.learning.UserManagement.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.learning.UserManagement.entities.User;
+import com.learning.UserManagement.payloads.ApiResponse;
 import com.learning.UserManagement.payloads.UserDto;
 import com.learning.UserManagement.service.UserService;
 
@@ -26,7 +29,7 @@ public class UserController {
 	private UserService userService;
 	
 	@PostMapping("/user")
-	public ResponseEntity<UserDto> createUser(@RequestBody User user){
+	public ResponseEntity<UserDto> createUser(@Valid @RequestBody User user){
 		UserDto savedUserDto = this.userService.addUser(user);
 		return new ResponseEntity<>(savedUserDto,HttpStatus.CREATED);
 	}
@@ -51,9 +54,9 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/user/{userId}")
-	public ResponseEntity<String> deleteUser(@PathVariable Integer userId){
+	public ResponseEntity<ApiResponse> deleteUser(@PathVariable Integer userId){
 	      this.userService.delete(userId);	
-		return new ResponseEntity<>("User deleted successfully",HttpStatus.OK);	
+		return new ResponseEntity<>(new ApiResponse("User Deleted Successfully",true),HttpStatus.OK);	
 	}
 	
 	
